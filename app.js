@@ -2,7 +2,10 @@ new Vue({
   el: '#app',
   data: {
     currencies: {},
-    name: 'mur'
+    name: 'mur',
+    amount: null,
+    from: 'EUR',
+    to: 'USD'
   },
   mounted() {
     this.getCurrencies();

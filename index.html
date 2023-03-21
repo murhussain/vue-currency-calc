@@ -24,16 +24,16 @@
       <div class="row">
         <div class="col-md-6">
           <label>From</label>
-          <select name="currency" id="" class="form-control">
-            <option value="" v-for="currency in formattedCurrencies">
+          <select v-model="from" name="currency" id="" class="form-control">
+            <option :value="currency.id" v-for="currency in formattedCurrencies">
               {{ currency.currencyName }}
             </option>
           </select>
         </div>
         <div class="col-md-6">
           <label>To</label>
-          <select name="currency" id="" class="form-control">
-            <option value="" v-for="currency in formattedCurrencies">
+          <select v-model="to" name="currency" id="" class="form-control">
+            <option :value="currency.id" v-for="currency in formattedCurrencies">
               {{ currency.currencyName }}
             </option>
           </select>
@@ -41,7 +41,7 @@
       </div>
       <div class="row">
         <div class="col-md-6 offset-md-3">
-          <input type="text" placeholder="Amount" class="form-control my-5">
+          <input type="text" v-model='amount' placeholder="Amount" class="form-control my-5">
           <div class="text-center">
             <button class="btn btn-lg btn-primary">Convert</button>
           </div>
