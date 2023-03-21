@@ -1,10 +1,16 @@
 new Vue({
   el: '#app',
   data: {
-    currencies: {}
+    currencies: {},
+    name: 'mur'
   },
   mounted() {
     this.getCurrencies();
+  },
+  computed:{
+    formattedCurrencies() {
+      return Object.values(this.currencies);
+    }
   },
   methods: {
     getCurrencies() { 
